@@ -1,4 +1,4 @@
-### Predicting Human Cognitive Performance
+### Predicting Human Cognitive Performance (Research Question and Dataset changed from Assignment 16.1)
 
 **Author: Michael Viet Nguyen**
 
@@ -14,15 +14,15 @@
 	The modeling phase will now proceed using Linear Regression as a baseline model and Random Forest Regressor to quantify the exact feature importance ranking of the remaining lifestyle variables.
 
 #### Rationale
-	Understanding which factors most reliably influence cognitive performance is critical for employers, educators, and public health officials who design wellness and development programs. Identifying reliable predictors allows organizations to make smarter decisions about how to optimize scheduling, target resources, or implement intervention strategies. For instance, if stress levels are confirmed as a dominant negative predictor, a company can focus efforts on employee stress reduction programs rather than expensive, generalized training. This analysis aims to provide actionable, data driven intelligence to maximize human performance in work and educational settings.
+	Understanding which factors most reliably influence cognitive performance is critical for employers, educators, and public health officials who design wellness and development programs. Identifying reliable predictors allows organizations to make smarter decisions about how to optimize scheduling, target resources, or implement intervention strategies. For instance, if stress levels are confirmed as a dominant negative predictor, a company can focus efforts on employee stress reduction programs rather than expensive, generalized training. This analysis aims to provide actionable, data driven intelligence to maximize human performance in work and educational settings. (Changed from Assignment 16.1)
 
 
 #### Research Question
-	Which measurable lifestyle factors most strongly predict an individual's calculated Cognitive Score?
+	Which measurable lifestyle factors most strongly predict an individual's calculated Cognitive Score? (Changed from Assignment 16.1)
 
 
 #### Data Sources
-	I will be using Samharison’s “Human Cognitive Performance Analysis: Lifestyle & AI Predictions” dataset from Kaggle, which includes 80,000 samples detailing lifestyle factors, demographic attributes, and computed cognitive performance scores.
+	I will be using Samharison’s “Human Cognitive Performance Analysis: Lifestyle & AI Predictions” dataset from Kaggle, which includes 80,000 samples detailing lifestyle factors, demographic attributes, and computed cognitive performance scores. (Changed from Assignment 16.1)
 
 
 #### Methodology
@@ -61,9 +61,7 @@
 
 #### Outline of project
 
-- [Link to notebook 1](https://github.com/MichaelNguyenz229/BerkeleyMLAICert/blob/main/capstoneEDA%20(3).ipynb)
-- [Link to notebook 2]()
-- [Link to notebook 3]()
+- [Link to notebook](https://github.com/MichaelNguyenz229/BerkeleyMLAICert/blob/main/capstoneEDA%20(3).ipynb)
 
 
 ##### Contact and Further Information
