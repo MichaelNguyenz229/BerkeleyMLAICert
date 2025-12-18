@@ -3,38 +3,61 @@
 **Author: Michael Viet Nguyen**
 
 #### Executive summary
-This project uses the Random Forest Regressor to analyze factors predicting an individual's Cognitive Score. Initial Exploratory Data Analysis (EDA) confirms strong predictive signals in the data:
-• Reaction Time showed the strongest correlation with Cognitive Score (-0.818470), indicating that slower reaction times strongly correlate with lower scores.
-• Memory Test Score (0.363894) was confirmed as a moderate positive predictor.
-• Among categorical factors, Exercise Frequency showed the most variation in mean score, with high frequency groups achieving a considerably higher mean score than low-frequency groups.
-• The data quality is confirmed to be high, as the outlier analysis showed the numeric features were highly uniform, requiring minimal treatment.
+	This project aims to identify which measurable lifestyle factors most strongly predict an individual’s calculated Cognitive Score. The findings from EDA revealed that lifestyle factors vary widely in their predictive utility. 
+
+	To preface, Reaction_Time and Memory_Test_Score were excluded from the numerical feature analysis. These values were measured and use to compute the Cognitive Score target feature.
+
+	Analysis of numeric features indicated that Stress_Level had the highest linear correlation value with Cognitive Score, exhibiting a negative correlation of -0.227639. 
+
+	Exercise Frequency was identified as the most impactful categorical predictor, accounting for a significant 14.21 point difference in mean Cognitive Score between high and low frequency groups. Comparatively, factors like Diet_Type and Gender showed negligible predictive power (0.34 points difference in mean). 
+
+	The modeling phase will now proceed using Linear Regression as a baseline model and Random Forest Regressor to quantify the exact feature importance ranking of the remaining lifestyle variables.
 
 #### Rationale
-Understanding which factors most reliably influence cognitive performance is critical for employers, educators, and public health officials who design wellness and development programs. Identifying reliable predictors—such as sleep duration or exercise frequency—allows organizations to make smarter decisions about how to optimize scheduling, target resources, or implement intervention strategies. For instance, if stress levels are confirmed as a dominant negative predictor, a company can focus efforts on employee stress reduction programs rather than expensive, generalized training. This analysis aims to provide actionable, data-driven intelligence to maximize human performance in work and educational settings.
+	Understanding which factors most reliably influence cognitive performance is critical for employers, educators, and public health officials who design wellness and development programs. Identifying reliable predictors allows organizations to make smarter decisions about how to optimize scheduling, target resources, or implement intervention strategies. For instance, if stress levels are confirmed as a dominant negative predictor, a company can focus efforts on employee stress reduction programs rather than expensive, generalized training. This analysis aims to provide actionable, data driven intelligence to maximize human performance in work and educational settings.
+
 
 #### Research Question
-Which measurable lifestyle and demographic factors most strongly predict an individual's calculated Cognitive Score?
+	Which measurable lifestyle factors most strongly predict an individual's calculated Cognitive Score?
 
 
 #### Data Sources
-I will be using Kaggle’s “Human Cognitive Performance Analysis: Lifestyle & AI Predictions” dataset, which includes 80,000 samples detailing lifestyle factors, demographic attributes, and computed cognitive performance scores.
+	I will be using Samharison’s “Human Cognitive Performance Analysis: Lifestyle & AI Predictions” dataset from Kaggle, which includes 80,000 samples detailing lifestyle factors, demographic attributes, and computed cognitive performance scores.
+
 
 #### Methodology
-This project utilizes a Supervised Learning approach, specifically implementing a regression model.
-1. Data Cleaning and EDA: The dataset must be cleaned, including the removal of missing and duplicate values. This phase includes Outliers analysis to identify anomalies in the dataset.
-2. Feature Engineering and Preprocessing: I will perform feature engineering to extraction and transformation of variables from raw data. This involves scaling numeric features (like sleep duration and stress levels) and implementing one-hot encoding for categorical variables (such as diet type and demographic attributes).
-3. Modeling: I will develop an appropriate regression ML model to utilize as baseline for your analysis. I will implement the Random Forest Regressor to build the predictive model for the Cognitive Score.
-4. Evaluation and Interpretation: The analysis requires a Clear identification of an evaluation metric and a Clear rationale for use of the given evaluation metric. The core research goal is Feature Importance Analysis to quantify which input variables contribute most significantly to predicting cognitive performance scores.
+
+	1. Data Preprocessing and Cleaning: 
+
+		- This stage involved handling missing and duplicate values, conducting outliers analysis, and performing critical data integrity checks
+    	- Numeric features (such as stress levels and sleep duration) were prepared using scaling methods to standardize their range, addressing minor skewness
+    	- Categorical variables (such as diet type and demographic attributes) were prepared using one hot encoding.
+
+	2. Supervised Learning: 
+
+		- The Random Forest Regressor will be implemented to build the predictive model for the Cognitive Score
+		- This model handles non linear relationships and will provide the best interpretable feature importance rankings
+
+	3. Feature Importance Analysis: 
+
+		- This technique will quantify the contribution of the input variables, providing a direct rank order answer to the research question
+
 
 #### Results
-The EDA confirms the presence of strong predictive features, setting the foundation for the modeling phase:
-• Strongest Predictors: The most significant linear relationship was a strong negative correlation between Reaction Time and Cognitive Score (-0.818470). Memory Test Score showed a moderate positive correlation (0.363894).
-• Negative Correlates: Variables like Stress Level (-0.227639), Daily Screen Time (-0.198515), and Caffeine Intake (-0.122862) showed negative correlations, aligning with the expectation that these factors negatively affect performance.
-• Categorical Impact: Exercise Frequency demonstrated the greatest predictive influence among categorical features, with groups reporting high exercise frequency showing a considerably higher mean Cognitive Score than groups with low exercise frequency.
-• Anticipated Performance: The Random Forest Regressor is anticipated to perform best because it handles nonlinear relationships and provides the necessary interpretable feature importance rankings, allowing us to rank these lifestyle factors precisely.
+	Categorical Feature Findings:
+
+		- Exercise Frequency: Showed a massive difference of 14.21 points in mean `Cognitive_Score` between the highest and lowest frequency groups
+		- Gender and Diet Type: Both showed a maximum difference of only 0.34 points in mean `Cognitive_Score` between their respective highest and lowest groups
+
+	Numeric Feature Findings:
+		- Excluding the 'Reaction_Time' and 'Memory_Test_Score', the correlation matrix showed that 'Stress_Level' is the strongest linear correlate among the remaining numeric predictors, exhibiting a negative correlation of -0.227639 with the Cognitive Score.
+
+	This EDA indicates that both ExerciseFrequency and Stress Level are highly valuable predictors.
+
 
 #### Next steps
-What suggestions do you have for next steps?
+	The next steps involve implementation and training of our Random Forest Regressor, applying the Feature Importance Analysis to rank all predictors, and interpreting the final evaluation metric.
+
 
 #### Outline of project
 
