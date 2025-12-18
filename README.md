@@ -61,7 +61,7 @@
 
 #### Outline of project
 
-- [[[Link to notebook 1](https://github.com/MichaelNguyenz229/BerkeleyMLAICert/blob/main/capstoneEDA%20(3).ipynb)]()]
+- [[[Link to notebook 1](https://github.com/MichaelNguyenz229/BerkeleyMLAICert/blob/main/capstoneEDA%20(3).ipynb)]]
 - [Link to notebook 2]()
 - [Link to notebook 3]()
 
